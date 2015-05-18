@@ -5,7 +5,7 @@ import com.badlogic.gdx.math.Matrix4;
 public class Settings {
 
 	
-	public final static String url = "http://178.62.139.220/";
+	public final static String url =""; // URL of your server
 	public static double RADIUS_RANGE = 250.0;
 	public static double INNER_RADIUS_RANGE = 3.0;
 	public static double LAYER_NAME_MIN = 0.0;
