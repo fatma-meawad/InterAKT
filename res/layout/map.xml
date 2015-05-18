@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/map_holder"
+    android:layout_width="100dp"
+    android:layout_height="100dp"
+    android:layout_gravity="top|right"
+    android:layout_margin="10dp"
+    android:background="@drawable/button"
+    android:orientation="vertical"
+    android:padding="10dp"
+    android:scrollX="110dp"
+    android:scrollY="110dp" >
+
+    <WebView
+        android:id="@+id/map_webview"
+        android:layout_width="300dp"
+        android:layout_height="300dp" />
+
+    <LinearLayout
+        android:id="@+id/map_clicker"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:background="#000f" 
+        android:orientation="horizontal">
+    </LinearLayout>
+
+</FrameLayout>

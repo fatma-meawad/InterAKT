@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/map_holder"
+    android:layout_width="100dp"
+    android:layout_height="100dp"
+    android:layout_gravity="top|right"
+    android:layout_margin="10dp"
+    android:background="@drawable/map_background"
+    android:orientation="vertical"
+    android:padding="10dp"
+    android:scrollX="110dp"
+    android:scrollY="110dp" >
+
+    <fragment
+        android:id="@+id/map_native_map"
+        android:name="com.google.android.gms.maps.MapFragment"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        class="com.google.android.gms.maps.MapFragment"
+        map:uiCompass="false"
+        map:uiZoomControls="false" />
+
+    <LinearLayout
+        android:id="@+id/map_clicker"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:background="#000f"
+        android:orientation="vertical" >
+    </LinearLayout>
+
+</FrameLayout>

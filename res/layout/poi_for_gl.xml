@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/poi_for_gl_holder"
+    android:layout_width="512px"
+    android:layout_height="128px"
+    android:background="@drawable/poibackground"
+    android:orientation="horizontal" >
+
+    <LinearLayout
+        android:layout_width="512px"
+        android:layout_height="128px"
+        android:orientation="horizontal" >
+
+        <FrameLayout
+            android:layout_width="128px"
+            android:layout_height="128px" 
+            android:padding="5px">
+
+            <ImageView
+                android:id="@+id/poi_for_gl_thumbnail"
+                android:layout_width="128px"
+                android:layout_height="128px"
+                android:padding="5dp"
+                android:layout_gravity="center_vertical"
+                android:scaleType="centerInside"
+                android:background="#333"
+                android:src="@drawable/locationbased" />
+
+            <TextView
+                android:id="@+id/poi_for_gl_children"
+                android:layout_width="40px"
+                android:layout_height="40px"
+                android:layout_gravity="bottom|left"
+                android:background="#ff9900"
+                android:gravity="center"
+                android:text="99"
+                android:textColor="#fff"
+                android:textSize="25px" />
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="384px"
+            android:layout_height="128px"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/poi_for_gl_name"
+                android:layout_width="384px"
+                android:layout_height="38px"
+                android:layout_margin="2px"
+                android:singleLine="true"
+                android:text="Name"
+                android:textColor="#f90"
+                android:textSize="35px"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/poi_for_gl_category"
+                android:layout_width="384px"
+                android:layout_height="38px"
+                android:layout_margin="2px"
+                android:singleLine="true"
+                android:text="Category"
+                android:textColor="#f90"
+                android:textSize="25px" />
+
+            <LinearLayout
+                android:layout_width="384px"
+                android:layout_height="40px"
+                android:layout_margin="2px" >
+
+                <TextView
+                    android:id="@+id/poi_for_gl_distance"
+                    android:layout_width="144px"
+                    android:layout_height="40px"
+                    android:singleLine="true"
+                    android:text="20m"
+                    android:textColor="#f90"
+                    android:padding="2px"
+                    android:textSize="22px" />
+
+                <ImageView
+                    android:layout_width="40px"
+                    android:layout_height="40px"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/comment_icn" />
+
+                <TextView
+                    android:id="@+id/poi_for_gl_comments"
+                    android:layout_width="40px"
+                    android:layout_height="40px"
+                    android:singleLine="true"
+                    android:text="0"
+                    android:textColor="#f90"
+                    android:textSize="17px" />
+
+                <ImageView
+                    android:layout_width="40px"
+                    android:layout_height="40px"
+                    android:padding="5px"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/likes_icn" />
+
+                <TextView
+                    android:id="@+id/poi_for_gl_likes"
+                    android:layout_width="40px"
+                    android:layout_height="40px"
+                    android:singleLine="true"
+                    android:text="0"
+                    android:textColor="#f90"
+                    android:textSize="17px" />
+
+                <ImageView
+                    android:layout_width="40px"
+                    android:layout_height="40px"
+                    android:padding="5px"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/star" />
+
+                <TextView
+                    android:id="@+id/poi_for_gl_rate"
+                    android:layout_width="40px"
+                    android:layout_height="40px"
+                    android:singleLine="true"
+                    android:text="0"
+                    android:textColor="#f90"
+                    android:textSize="17px" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

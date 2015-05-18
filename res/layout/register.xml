@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#555" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="#333"
+        android:padding="5dp" >
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="left"
+            android:padding="5dp"
+            android:text="Registration"
+            android:textColor="#f90"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <ProgressBar
+            android:id="@+id/loading"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_below="@+id/camera"
+            android:layout_gravity="center"
+            android:layout_weight="0"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@drawable/description_box"
+        android:orientation="vertical"
+        android:padding="5dp" >
+
+        <AutoCompleteTextView
+            android:id="@+id/register_name"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@drawable/button_clicked_sqaure"
+            android:hint="Email"
+            android:padding="5dp"
+            android:textColor="#f90" />
+
+        <TextView
+            android:id="@+id/register_name_error"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:text=""
+            android:textColor="#ff0000"
+            android:visibility="gone" />
+
+        <AutoCompleteTextView
+            android:id="@+id/register_password"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@drawable/button_clicked_sqaure"
+            android:hint="Password"
+            android:padding="5dp"
+            android:password="true"
+            android:textColor="#f90" />
+
+        <TextView
+            android:id="@+id/register_password_error"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:text=""
+            android:textColor="#ff0000"
+            android:visibility="gone" />
+
+        <AutoCompleteTextView
+            android:id="@+id/register_confirm_password"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@drawable/button_clicked_sqaure"
+            android:hint="Confirm Password"
+            android:padding="5dp"
+            android:password="true"
+            android:textColor="#f90" />
+
+        <TextView
+            android:id="@+id/register_confirm_password_error"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:text=""
+            android:textColor="#ff0000"
+            android:visibility="gone" />
+
+        <AutoCompleteTextView
+            android:id="@+id/register_twitter"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@drawable/button_clicked_sqaure"
+            android:hint="Twitter Username"
+            android:padding="5dp"
+            android:textColor="#f90" />
+
+        <TextView
+            android:id="@+id/register_twitter_error"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:text=""
+            android:textColor="#ff0000"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/register_btn"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/button_clicked_sqaure"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="Register"
+            android:textColor="#f90" />
+    </LinearLayout>
+
+</RelativeLayout>

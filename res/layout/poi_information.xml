@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:background="#555"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#333"
+        android:padding="5dp" >
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="left"
+            android:padding="5dp"
+            android:text="POI Info"
+            android:textColor="#f90"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tagging_information_poi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="0"
+            android:background="@drawable/button_square"
+            android:padding="5dp"
+            android:text="Add"
+            android:textColor="#f90" />
+    </LinearLayout>
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="fill_parent"
+        android:layout_height="200dp" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/button_clicked_sqaure"
+                    android:orientation="horizontal" >
+
+                    <AutoCompleteTextView
+                        android:id="@+id/nameTextView"
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="#0fff"
+                        android:hint="POI name"
+                        android:padding="5dp"
+                        android:textColor="#f90" />
+
+                    <ImageView
+                        android:id="@+id/name_warning"
+                        android:layout_width="50dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0"
+                        android:padding="5dp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/warning"
+                        android:visibility="invisible" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:padding="5dp" >
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical" >
+
+                        <AutoCompleteTextView
+                            android:id="@+id/parentTextView"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/button_clicked_sqaure"
+                            android:hint="is part of"
+                            android:padding="5dp"
+                            android:textColor="#f90" />
+
+                        <TextView
+                            android:id="@+id/parentErrorMsg"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0"
+                            android:text="No such POI"
+                            android:textColor="#ff0000"
+                            android:visibility="gone" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/parentWarning"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="0"
+                        android:src="@drawable/suggestions_icon"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:padding="5dp" >
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical" >
+
+                        <AutoCompleteTextView
+                            android:id="@+id/children_autocomplete_textView"
+                            android:layout_width="fill_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/button_clicked_sqaure"
+                            android:hint="contains"
+                            android:padding="5dp"
+                            android:textColor="#f90" />
+
+                        <TextView
+                            android:id="@+id/children_error_msg"
+                            android:layout_width="fill_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:text="No such POI"
+                            android:textColor="#ff0000"
+                            android:visibility="gone" />
+
+                        <ListView
+                            android:id="@+id/children_list_view"
+                            android:layout_width="fill_parent"
+                            android:layout_height="0dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_weight="1"
+                            android:background="#7000"
+                            android:paddingLeft="5dp"
+                            android:paddingRight="5dp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/children_warning"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:padding="5dp"
+                    android:src="@drawable/suggestions_icon"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/button_clicked_sqaure"
+                android:orientation="horizontal" >
+
+                <AutoCompleteTextView
+                    android:id="@+id/add_poi_category"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#0fff"
+                    android:hint="Category"
+                    android:padding="5dp"
+                    android:textColor="#f90" />
+
+                <!--
+                     <ImageView
+                    android:id="@+id/add_category"
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0"
+                     android:padding="5dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/add" />
+                -->
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/categoryErrorMsg"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:textColor="#ff0000"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/button_clicked_sqaure"
+                android:orientation="horizontal" >
+
+                <AutoCompleteTextView
+                    android:id="@+id/add_poi_source"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#0fff"
+                    android:hint="Source"
+                    android:padding="5dp"
+                    android:textColor="#f90" />
+
+                <!--
+                     <ImageView
+                    android:id="@+id/add_source"
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0"
+                    android:padding="5dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/add" />
+                -->
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/sourceErrorMsg"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:textColor="#ff0000"
+                android:visibility="gone" />
+
+
+
+            <EditText
+                android:id="@+id/add_poi_description"
+                android:layout_width="fill_parent"
+                android:layout_height="200dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/button_clicked_sqaure"
+                android:hint="Enter Description"
+                android:padding="5dp"
+                android:textColor="#f90" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

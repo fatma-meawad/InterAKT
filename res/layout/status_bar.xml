@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="40dp"
+    android:background="@drawable/button"
+    android:orientation="horizontal" 
+    android:layout_marginRight="5dp">
+
+    <ImageView
+        android:id="@+id/status_bar_internet_indicator"
+        android:layout_width="40dp"
+        android:layout_height="20dp"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:src="@drawable/internet_notconnected" />
+
+    <ImageView
+        android:layout_width="1dp"
+        android:layout_height="40dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/vertical_seperator" />
+
+    <ImageView
+        android:id="@+id/status_bar_gps_indicator"
+        android:layout_width="40dp"
+        android:layout_height="20dp"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:src="@drawable/gps_notconnected" />
+
+    <ImageView
+        android:layout_width="1dp"
+        android:layout_height="40dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/vertical_seperator" />
+
+    <ImageView
+        android:id="@+id/status_bar_radius_indicator"
+        android:layout_width="40dp"
+        android:layout_height="20dp"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:src="@drawable/filter" />
+
+
+
+<!--     <ImageView
+        android:id="@+id/status_bar_layer"
+        android:layout_width="40dp"
+        android:layout_height="20dp"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+
+        android:src="@drawable/zoom" />
+
+    <ImageView
+        android:layout_width="1dp"
+        android:layout_height="40dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/vertical_seperator" / -->>
+
+    
+
+</LinearLayout>

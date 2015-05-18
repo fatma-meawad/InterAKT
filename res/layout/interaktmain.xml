@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#555"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/interaktmain_header"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="#333"
+        android:padding="5dp" >
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="left"
+            android:padding="5dp"
+            android:text="InterAKT"
+            android:textColor="#f90"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/interaktmain_logout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="0"
+            android:background="@drawable/button_square"
+            android:padding="5dp"
+            android:text="Logout"
+            android:textColor="#f90" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/interaktmain_footer"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/interaktmain_header"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="center"
+            android:scaleType="fitXY"
+            android:src="@drawable/poimap" />
+
+ 
+    </LinearLayout>
+
+    <ViewAnimator
+        android:id="@+id/interaktmain_flipper"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+      
+        android:layout_below="@id/interaktmain_footer" >
+
+        <include
+            android:id="@+id/firstlayout"
+            layout="@layout/interaktmain_outdoors" />
+
+    </ViewAnimator>
+
+</RelativeLayout>
